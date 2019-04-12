@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.cpp
+iostream
+-
+fstream
+-
+string
+-
+TwoLinkedList.h
+/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.h
+
+/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.h
+
+/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/main.cpp
+iostream
+-
+string
+-
+fstream
+-
+vector
+-
+cassert
+-
+TwoLinkedList.h
+/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.h
+
