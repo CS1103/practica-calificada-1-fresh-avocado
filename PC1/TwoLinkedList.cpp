@@ -198,7 +198,7 @@ std::string TwoLinkedList::getlist(int list) {
             return "Empty list1.";
         }
         Node* temp = head1;
-        for (int i = 0; i < size1(); ++i) {
+        for (int i = 0; i < size1()+1; ++i) {
             output_list += std::to_string(temp->value);
             output_list += " ";
             temp = temp->next;
@@ -210,7 +210,7 @@ std::string TwoLinkedList::getlist(int list) {
             return "Empty list2";
         }
         Node* temp = head2;
-        for (int i = 0; i < size2(); ++i) {
+        for (int i = 0; i < size2()+1; ++i) {
             output_list += std::to_string(temp->value);
             output_list += " ";
             temp = temp->next;
@@ -256,9 +256,10 @@ Node* TwoLinkedList::search(int value) {
 void TwoLinkedList::save(std::string filename) {
     std::ofstream file;
     file.open(filename);
+    Node* temp = nullptr;
 
     if (!is_merged) {
-        Node* temp = head1;
+        temp = head1;
         for (int i = 0; i < size1(); ++i) {
             file << temp->value << ",";
             temp = temp->next;
@@ -271,7 +272,7 @@ void TwoLinkedList::save(std::string filename) {
             temp = temp->next;
         }
     } else if (is_merged) {
-        Node* temp = head1;
+        temp = head1;
         for (int i = 0; i < size1(); ++i) {
             file << temp->value << ",";
             temp = temp->next;
@@ -284,6 +285,7 @@ void TwoLinkedList::save(std::string filename) {
             temp = temp->next;
         }
         file << "\n";
+
         temp = merge_point;
         for (int k = 0; k < merged_size(); ++k) {
             file << temp->value << ",";
