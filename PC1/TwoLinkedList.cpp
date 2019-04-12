@@ -24,7 +24,15 @@ TwoLinkedList::~TwoLinkedList() {
         }
     } else {
         // list is merged, delete each
-
+        for (int i = 0; i < merged_size(); ++i) {
+            pop_back1();
+        }
+        for (int i = 0; i < size1()-1; ++i) { // -1 porque ya se borró el tail1 y tail2
+            pop_back1();
+        }
+        for (int i = 0; i < size2()-1; ++i) { // -1 porque ya se borró el tail1 y tail2
+            pop_back2();
+        }
     }
 }
 
@@ -88,7 +96,7 @@ bool TwoLinkedList::is_empty2() {
 
 std::string TwoLinkedList::merge(int value) {
     if (is_merged) {
-        std::cout << "Operación duplicada." << std::endl;
+        return "Operación duplicada";
     } else {
         if (!is_empty1() && !is_empty2()) {
             Node* merge_point = new Node(value);
@@ -97,10 +105,10 @@ std::string TwoLinkedList::merge(int value) {
             tail2->next = merge_point;
             tail2 = merge_point;
             tail = merge_point;
-            std::cout << "Operación exitosa." << std::endl;
             is_merged = true;
+            return "Operación Exitosa";
         } else {
-            std::cout << "Ambas listas deben tener al menos 1 elemento para llamar merge." << std::endl;
+            return "Ambas listas deben tener al menos 1 elemento para llamar merge.";
         }
     }
 }
