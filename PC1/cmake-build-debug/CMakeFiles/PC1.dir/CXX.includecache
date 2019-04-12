@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.h
-
-/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/main.cpp
+/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.cpp
 iostream
--
-string
 -
 fstream
 -
-vector
--
-cassert
+string
 -
 TwoLinkedList.h
+/Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.h
+
 /Users/gabrielspranger/Desktop/GitHub/practica-calificada-1-fresh-avocado/PC1/TwoLinkedList.h
 

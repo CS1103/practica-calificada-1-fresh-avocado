@@ -269,7 +269,7 @@ void TwoLinkedList::save(std::string filename) {
             file << temp->value << ",";
             temp = temp->next;
         }
-    } else {
+    } else if (is_merged) {
         Node* temp = head1;
         for (int i = 0; i < size1(); ++i) {
             file << temp->value << ",";
@@ -282,7 +282,7 @@ void TwoLinkedList::save(std::string filename) {
             temp = temp->next;
         }
         file << "\n";
-        temp = tail1;
+        temp = tail2;
         for (int k = 0; k < merged_size(); ++k) {
             file << temp->value << ",";
             temp = temp->next;
