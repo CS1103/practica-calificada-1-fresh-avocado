@@ -99,7 +99,7 @@ std::string TwoLinkedList::merge(int value) {
         return "Operación duplicada";
     } else {
         if (!is_empty1() && !is_empty2()) {
-            Node* merge_point = new Node(value);
+            merge_point = new Node(value);
             tail1->next = merge_point;
             tail1 = merge_point;
             tail2->next = merge_point;
@@ -148,7 +148,7 @@ void TwoLinkedList::push_back2(int value) {
 int TwoLinkedList::size1() {
     int count = 0;
     Node* actual = head1;
-    while(actual != nullptr) {
+    while(actual != tail1) {
         count++;
         actual = actual->next;
     }
@@ -158,7 +158,7 @@ int TwoLinkedList::size1() {
 int TwoLinkedList::size2() {
     int count = 0;
     Node* actual = head2;
-    while(actual != nullptr) {
+    while(actual != tail2) {
         count++;
         actual = actual->next;
     }
@@ -264,6 +264,7 @@ void TwoLinkedList::save(std::string filename) {
             temp = temp->next;
         }
         file << "\n";
+
         temp = head2;
         for (int j = 0; j < size2(); ++j) {
             file << temp->value << ",";
@@ -276,13 +277,14 @@ void TwoLinkedList::save(std::string filename) {
             temp = temp->next;
         }
         file << "\n";
+
         temp = head2;
         for (int j = 0; j < size2(); ++j) {
             file << temp->value << ",";
             temp = temp->next;
         }
         file << "\n";
-        temp = tail2;
+        temp = merge_point;
         for (int k = 0; k < merged_size(); ++k) {
             file << temp->value << ",";
             temp = temp->next;

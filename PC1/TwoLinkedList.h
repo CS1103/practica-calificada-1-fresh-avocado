@@ -18,10 +18,12 @@ class TwoLinkedList {
     Node* tail1;
     Node* tail2;
     Node* tail;
+    Node* merge_point;
     bool is_merged;
 
 public:
-    TwoLinkedList(): head1{nullptr}, head2{nullptr}, tail1{nullptr}, tail2{nullptr}, tail{nullptr}, is_merged{false} {}
+    TwoLinkedList(): head1{nullptr}, head2{nullptr}, tail1{nullptr}, tail2{nullptr}, tail{nullptr}, is_merged{false}, merge_point{
+            nullptr} {}
     ~TwoLinkedList();
 
     void push_back1(int value);

@@ -70,7 +70,5 @@ int main() {
     for (int i = 0; i < test.size(); i++)
         assert(test[i] == output[i]);
 
-    cout << "Bien" << endl;
-
     return 0;
 }
